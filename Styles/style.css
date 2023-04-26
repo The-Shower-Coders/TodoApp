@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background-color: rgb(37, 37, 38);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#model {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#new {
+  background-color: rgb(30, 30, 30);
+  width: 50vw;
+  height: 4vh;
+  border-radius: 5%;
+  display: flex;
+}
+
+#new > button {
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* defualt label */
+.input {
+  flex-grow: 4;
+  position: relative;
+}
+
+/* upper text or inline */
+.input__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: calc(0.5rem * 0.75) calc(0.5rem * 0.5);
+  margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
+  background: pink;
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  background: transparent;
+  transition: transform 120ms ease-in;
+  font-weight: bold;
+  line-height: 1.2;
+  color: rgb(204, 204, 204);
+}
+
+/* input type=text */
+.input__field {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  padding: calc(0.5rem * 1.5) 0.5rem;
+  background: transparent;
+  border-radius: 4px;
+  color: rgb(204, 204, 204);
+}
+
+/* when focused */
+.input__field:focus + .input__label,
+.input__field:not(:placeholder-shown) + .input__label {
+  transform: translate(0.25rem, -100%) scale(0.8);
+  color: rgb(204, 204, 204);
+}
+
+#list {
+  position: relative;
+  background-color: rgb(30, 30, 30);
+  outline: dashed 1px rgb(112, 112, 112);
+  border-radius: 2%;
+  top: 10px;
+  width: 50vw;
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
